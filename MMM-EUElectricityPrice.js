@@ -209,8 +209,9 @@ Module.register("MMM-EUElectricityPrice", {
 		var wrapper = document.createElement("div");
 		if (this.config.width) {
 			wrapper.style.width = this.config.width;
-			wrapper.style.transform = `translate(${this.config.posRight}, ${this.config.posDown})`;
-		}
+      wrapper.style.marginLeft = "auto";
+      wrapper.style.marginRight = "auto";
+    }
 
 		if (this.config.height) {
 			wrapper.style.height = this.config.height;
@@ -308,7 +309,7 @@ Module.register("MMM-EUElectricityPrice", {
 				// Determine color and background based on conditions and add to respective arrays
 				if (i === currentHourMark) {
 					showColor.unshift(this.config.currentColor);
-					if (this.config.currentbgSwitch) {
+					if (this.config.currentBg) {
 						showBg.unshift(this.config.currentBg);
 					}
 					else {
